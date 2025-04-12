@@ -13,9 +13,14 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
 </script>
 
 <template>
-  <div class="main-content">
+  <!-- <div class="main-content"> -->
+  <Card>
+  <template #title>
+
     <h1 style="margin-bottom: 10px;">The Valley of Peace</h1>
     <span style="margin-bottom: 30px; display: block;">Welcome to the Soverign Nation of the Valley of Peace</span>
+  </template>
+  <template #content>
     <div>
       <Image src="src/assets/valley.PNG" width="100%" preview/>
     </div>
@@ -80,14 +85,14 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
     </div>
 
 
-  </div>
+  </template>
+  </Card>
+  <!-- </div> -->
 </template>
 
 <style scoped>
-.main-content {
-  background-color: white;
-  border-radius: 10px;
-  padding-top: 0.5em;
+::v-deep(.p-card-body) {
+  padding: 0;
 }
 ::v-deep(.responsive-image img) {
   width: 70%;
