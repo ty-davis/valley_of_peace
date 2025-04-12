@@ -33,7 +33,7 @@
 .quote {
   display: block;
   font-size: var(--quote-fontsize, xx-large);
-  padding: 1em 0;
+  padding: 1em 1em;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     var(--quote-background, url('src/assets/block/bedrock.png'));

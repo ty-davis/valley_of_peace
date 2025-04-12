@@ -61,7 +61,7 @@
         />
       </div>
 
-      <div style="margin: 10px;">
+      <div style="margin: 10px; display: flex; justify-content: center; gap: 30px;">
         <MultiSelect
             v-model="selectedBlocks"
             :options="blocks"
@@ -71,10 +71,13 @@
             placeholder="Select Blocks"
             class="flex-multiselect"
             />
+        <!-- <Button label="Export Palette"> </Button> -->
+        <!-- <Button label="Import Palette" severity="secondary"> </Button> -->
       </div>
 
       <h2 id="inspo" class="heading">Inspo</h2>
 
+        Check out <a href="https://www.pinterest.com/taylorknight02/minecraft-architecture/">Taylor's board</a> for inspiration.
         <div class="pin-wrapper">
           <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/taylorknight02/minecraft-architecture/"></a>
         </div>
@@ -128,16 +131,16 @@
 }
 .nav a {
   text-decoration: none;
-  color: gray;
+  color: #333;
   padding: 0.5em;
-  background-color: #cacaca;
+  background-color: #aaa;
   margin: 0.5em;
   border-radius: 10px;
   transition: 0.1s ease-out;
 }
 .nav a:hover {
   transition: 0.1s ease-out;
-  font-size: x-large;
+  background-color: #ccc;
 }
 .heading {
   border-bottom: solid gray;
