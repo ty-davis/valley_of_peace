@@ -1,13 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+  import { ref } from 'vue';
+  import { onMounted } from 'vue'
 
-import HelloWorld from './components/HelloWorld.vue';
-import Quote from './components/Quote.vue';
-import BlockPic from './components/BlockPic.vue';
+  import HelloWorld from './components/HelloWorld.vue';
+  import Quote from './components/Quote.vue';
+  import BlockPic from './components/BlockPic.vue';
 
-import { blocks } from './data/blocks';
+  import { blocks } from './data/blocks';
 
-const selectedBlocks = ref(['cherry_planks', 'bedrock']);
+  const selectedBlocks = ref(['cherry_planks', 'bedrock']);
+
+
+  onMounted(() => {
+    const script = document.createElement('script')
+    script.async = true
+    script.defer = true
+    script.src = '//assets.pinterest.com/js/pinit.js'
+    document.body.appendChild(script)
+  })
 
 
 </script>
@@ -28,6 +38,7 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
       <div class="nav">
         <a href="#vision">Vision</a>
         <a href="#palette">Pallete</a>
+        <a href="#inspo">Inspo</a>
         <a href="#voppa">VOPPA</a>
       </div>
     </nav>
@@ -62,6 +73,11 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
             />
       </div>
 
+      <h2 id="inspo" class="heading">Inspo</h2>
+
+        <div class="pin-wrapper">
+          <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/taylorknight02/minecraft-architecture/"></a>
+        </div>
 
 
       <h2 id="voppa" class="heading">Valley of Peace Protection Agency</h2>
@@ -107,7 +123,7 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: larger;
-  align-items: baseline;
+  align-items: center;
 
 }
 .nav a {
@@ -124,6 +140,8 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
   font-size: x-large;
 }
 .heading {
+  border-bottom: solid gray;
+  border-width: 0.10em;
   text-align: left;
 }
 
@@ -131,6 +149,10 @@ const selectedBlocks = ref(['cherry_planks', 'bedrock']);
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+.pin-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 </style>
