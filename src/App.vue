@@ -2,13 +2,8 @@
   import { ref } from 'vue';
   import { onMounted } from 'vue'
 
-  import HelloWorld from './components/HelloWorld.vue';
   import Quote from './components/Quote.vue';
-  import BlockPic from './components/BlockPic.vue';
-
-  import { blocks } from './data/blocks';
-
-  const selectedBlocks = ref(['cherry_planks', 'bedrock']);
+  import Palette from './components/Palette.vue';
 
 
   onMounted(() => {
@@ -37,7 +32,7 @@
     <nav>
       <div class="nav">
         <a href="#vision">Vision</a>
-        <a href="#palette">Pallete</a>
+        <a href="#palette">Palette</a>
         <a href="#inspo">Inspo</a>
         <a href="#voppa">VOPPA</a>
       </div>
@@ -49,31 +44,10 @@
 
     <div class="word-content">
       <h2 id="vision" class="heading">Vision</h2>
-      <Image src="src/assets/snvop.JPEG" class="responsive-image" style="box-shadow: lightgray 0px 0px 10px 0px; border-radius: 10px;" preview/>
+      <Image src="src/assets/snvop.JPEG" class="responsive-image" style="" preview/>
 
       <h2 id="palette" class="heading">Palette</h2>
-
-      <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-        <BlockPic 
-             v-for="block in selectedBlocks"
-             :key="block"
-             :block="block"
-        />
-      </div>
-
-      <div style="margin: 10px; display: flex; justify-content: center; gap: 30px;">
-        <MultiSelect
-            v-model="selectedBlocks"
-            :options="blocks"
-            :filter="true"
-            display="chip"
-            showClear
-            placeholder="Select Blocks"
-            class="flex-multiselect"
-            />
-        <!-- <Button label="Export Palette"> </Button> -->
-        <!-- <Button label="Import Palette" severity="secondary"> </Button> -->
-      </div>
+      <Palette/>
 
       <h2 id="inspo" class="heading">Inspo</h2>
 
@@ -116,6 +90,14 @@
 ::v-deep(.responsive-image img) {
   width: 70%;
   margin: 0 auto;
+}
+.responsive-image {
+  box-shadow: lightgray 0px 0px 10px 0px;
+  border-radius: 10px;
+  @media (prefers-color-scheme: dark) {
+    box-shadow: #444 0px 0px 10px 0px;
+  }
+
 }
 .word-content {
   padding: 2em;
