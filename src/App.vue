@@ -4,6 +4,7 @@
 
   import Quote from './components/Quote.vue';
   import Palette from './components/Palette.vue';
+  import ServerInfo from './components/ServerInfo.vue';
 
 
   onMounted(() => {
@@ -26,6 +27,7 @@
     <span style="margin-bottom: 30px; display: block;">Welcome to the Soverign Nation of the Valley of Peace</span>
   </template>
   <template #content>
+    <ServerInfo/>
     <div>
       <Image src="src/assets/valley.PNG" width="100%" preview/>
     </div>
@@ -41,6 +43,7 @@
     <Quote
         :text='"Power is overrated, especially when no one there to compete with you"'
         :author='"Sun Tzu"'/>
+
 
     <div class="word-content">
       <h2 id="vision" class="heading">Vision</h2>
@@ -130,11 +133,6 @@
   text-align: left;
 }
 
-.flex-multiselect ::v-deep(.p-multiselect-label) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
 .pin-wrapper {
   display: flex;
   justify-content: center;
