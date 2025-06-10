@@ -12,6 +12,7 @@ import DialogService from 'primevue/dialogservice';
 import Button from 'primevue/button';
 import Card from 'primevue/card';
 import Image from 'primevue/image';
+import InputText from 'primevue/inputtext';
 import MultiSelect from 'primevue/multiselect';
 import Textarea from 'primevue/textarea';
 
@@ -32,6 +33,7 @@ app.component("AccordionHeader", AccordionHeader);
 app.component("Dialog", Dialog);
 app.component("Button", Button);
 app.component("Image", Image);
+app.component("InputText", InputText);
 app.component("MultiSelect", MultiSelect);
 app.component("Textarea", Textarea);
 
