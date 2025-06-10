@@ -14,7 +14,6 @@
     document.body.appendChild(script)
   })
 
-
 </script>
 
 <template>
@@ -28,7 +27,7 @@
   <template #content>
     <ServerInfo/>
     <div>
-      <Image src="src/assets/valley2.png" width="100%" preview/>
+      <Image src="assets/valley2.png" width="100%" preview/>
     </div>
     <nav>
       <div class="nav">
@@ -46,7 +45,7 @@
 
     <div class="word-content">
       <h2 id="vision" class="heading">Vision</h2>
-      <Image src="src/assets/snvop.JPEG" class="responsive-image" style="" preview/>
+      <Image src="assets/snvop.JPEG" class="responsive-image" style="" preview/>
 
       <h2 id="palette" class="heading">Palette</h2>
       <Palette/>

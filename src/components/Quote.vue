@@ -17,11 +17,12 @@
       default: 'bedrock'
     }
   })
+
 </script>
 
 <template>
   <div class="quote" :style="{
-      '--quote-background': `url(src/assets/block/${blockName}.png)`,
+      '--quote-background': `url(${'block/' + blockName + '.png'})`,
       '--quote-fontsize': `${fontSize}`
     }">
     <p style="text-shadow: 0 0 10px black;">{{ text }}</p>

@@ -5,11 +5,12 @@
       default: 'bedrock'
     }
   })
+
 </script>
 
 <template>
   <div>
-    <img :src="`/src/assets/block/${block}.png`"/>
+    <img :src="`assets/block/${block}.png`"/>
   </div>
 </template>
 
