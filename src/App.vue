@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
   import { onMounted } from 'vue'
 
   import Quote from './components/Quote.vue';

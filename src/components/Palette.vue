@@ -14,11 +14,11 @@
   const importText = ref("");
   const selectedBlocks = ref([267, 300]);
 
-  const visibleBlocks = ref([]);
+  const visibleBlocks = ref<Array<{ label: string; value: number }>>([]);
 
   const loading = ref(false);
 
-  const onLazyLoad = (event) => {
+  const onLazyLoad = (event: any) => {
     loading.value = true;
     setTimeout(() => {
       const { first, last } = event;
