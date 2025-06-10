@@ -25,7 +25,7 @@ a:hover {
 body {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/src/assets/block/dirt.png');
+    url('/assets/block/dirt.png');
   background-size: 64px 64px;
   background-repeat: repeat;
   image-rendering: pixelated;
