@@ -27,7 +27,7 @@
   <template #content>
     <ServerInfo/>
     <div>
-      <Image src="assets/valley2.png" width="100%" preview/>
+      <Image src="assets/valley3.jpeg" width="100%" preview/>
     </div>
     <nav>
       <div class="nav">
